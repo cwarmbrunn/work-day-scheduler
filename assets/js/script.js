@@ -1,8 +1,67 @@
-// Clock Element
+var events = {};
 
-var clockElement = document.getElementById("currentDay");
+var createEvents = function () {
+  // create elements that make up an event
+  // Append elements to parent
+};
 
+// Function to save events to localStorage
+var saveEvents = function () {
+
+  localStorage.setItem("events", JSON.stringify(events));
+};
+var loadEvents = function () {}
+// Setting up time/clock element
+var time = document.getElementById("currentDay");
 function currentDay() {
-  clockElement.textContent = new Date().toString();
+  time.textContent = new Date().toString();
 }
+
+// Refreshing every second (1000 milliseconds)
 setInterval(currentDay, 1000);
+
+// Use Moment.js to add the text content of the current month, day and year
+function checkEvent() {
+  clockEl = moment().hours();
+
+  // Set up the event element - this is on all time blocks
+  $("event-category").each(function () {
+    var blockHour = parseInt($(this).attr("class"));
+    // If Conditional for if blockHour is less than the clockElement
+    // Will add past class
+    if (blockHour < clockEl) {
+      $(this).addClass("past");
+
+      // Else If Conditional for if blockHour is equal to the clockElement
+    } else if (blockHour === clockEl) {
+      $(this).removeClass("past");
+      $(this).addClass("present");
+
+      // Else If Conditional for if blockHour is equal to the clockElement
+    } else if (blockHour > clockEl) {
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+      $(this).addClass("future");
+    }
+  });
+}
+var addP = $("<p>").addClass("event").text(eventText);
+
+var eventText = $("<p>").val();
+
+// on card click - allow user to edit to add/change event
+$(".event-category").on("click", function () {
+  var text = $(this).text().trim();
+
+  var textInput = $("<textarea>").val(text);
+  $(this).replaceWith(textInput);
+
+  textInput.trigger("focus");
+});
+// get current text (if applicable)
+
+// auto focus on new element
+
+// get current value of textarea
+
+// update and re-save to localStorage

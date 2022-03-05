@@ -15,100 +15,100 @@
 </head>
 
 <body>
-  <header class="jumbotron">
+  <header class="jumbotron ">
     <h1 class="display-3 text-center">Work Day Scheduler</h1>
     <p class="lead text-center">A simple calendar app for scheduling your work day</p>
+    <br>
     <p id="currentDay" class="lead text-center"></p>
   </header>
-  <div class="container col-12 col-lg-9 d-flex flex-column">
-    <div class="m-3 row justify-content-around">
-      <!-- Timeblocks go here -->
+  <main class="container col-12 col-lg-9 d-flex flex-column align-items-center">
 
-      <!-- Hour 1 - 9 AM -->
-      <div class="col-12 col-md-6 col-lg-9 ">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            9:00 A.M.
-          </h4>
-        </div>
+    <!-- Timeblocks go here -->
+
+    <!-- Hour 1 - 9 AM -->
+    <div class=" col-12 col-md-6 col-lg-9 ">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">9AM</h4>
       </div>
+    </div>
 
-      <!-- Hour 2 - 10 AM -->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            10:00 A.M.
-          </h4>
-        </div>
+    <!-- Hour 2 - 10 AM -->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          10AM</h4>
       </div>
+    </div>
 
-      <!-- Hour 3 - 11 AM -->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            11:00 A.M.
-          </h4>
-        </div>
+    <!-- Hour 3 - 11 AM -->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          11AM
+        </h4>
       </div>
+    </div>
 
-      <!-- Hour 4 - 12 PM -->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            12:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 4 - 12 PM -->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          12PM
+        </h4>
       </div>
+    </div>
 
-      <!-- Hour 5 - 1 PM-->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            1:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 5 - 1 PM-->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          1PM
+        </h4>
       </div>
+    </div>
 
-      <!-- Hour 6 - 2 PM-->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            2:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 6 - 2 PM-->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          2PM
+        </h4>
       </div>
+    </div>
 
-      <!-- Hour 7 - 3 PM-->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            3:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 7 - 3 PM-->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          3PM
+        </h4>
       </div>
+    </div>
 
-      <!-- Hour 8 - 4  PM-->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            4:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 8 - 4  PM-->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          4PM</h4>
+        </ul>
       </div>
+    </div>
 
-      <!-- Hour 9 - 5 PM-->
-      <div class="col-12 col-md-6 col-lg-9">
-        <div class="card mb-2">
-          <h4 class="card-header bg-light text-dark align-items-left">
-            5:00 P.M.
-          </h4>
-        </div>
+    <!-- Hour 9 - 5 PM-->
+    <div class="col-12 col-md-6 col-lg-9">
+      <div class="card mb-2 event-category">
+        <h4 class="card-header bg-light text-dark">
+          5 PM
+        </h4>
       </div>
+    </div>
+  </main>
 
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <!-- Secondary: Script File - JavaScript -->
-      <script src="./assets/js/script.js"></script>
+  <!-- Scripts Begin -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- Secondary: Script File - JavaScript -->
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
