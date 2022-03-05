@@ -20,6 +20,8 @@ Head over to https://cwarmbrunn.github.io/work-day-scheduler/to view the page li
 - Bootstrap
 - jQuery
 - Moment.js
+- HTML
+- CSS
 
 ---
 
