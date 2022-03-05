@@ -1,38 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Work Day Scheduler</title>
+
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3 text-center">Work Day Scheduler</h1>
+    <p class="lead text-center">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead text-center"></p>
+  </header>
+  <div class="container col-12 col-lg-9 d-flex flex-column">
+    <div class="m-3 row justify-content-around">
       <!-- Timeblocks go here -->
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+      <!-- Hour 1 - 9 AM -->
+      <div class="col-12 col-md-6 col-lg-9 ">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            9:00 A.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 2 - 10 AM -->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            10:00 A.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 3 - 11 AM -->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            11:00 A.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 4 - 12 PM -->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            12:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 5 - 1 PM-->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            1:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 6 - 2 PM-->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            2:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 7 - 3 PM-->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            3:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 8 - 4  PM-->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            4:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+      <!-- Hour 9 - 5 PM-->
+      <div class="col-12 col-md-6 col-lg-9">
+        <div class="card mb-2">
+          <h4 class="card-header bg-light text-dark align-items-left">
+            5:00 P.M.
+          </h4>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Setting up Date/Time Element for currentDay-->
+  <script type="text/javascript">
+    var clockElement = document.getElementById('currentDay')
+
+    function currentDay() {
+      clockElement.textContent = new Date().toString()
+    }
+    setInterval(currentDay, 1000)
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</body>
+
 </html>

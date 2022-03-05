@@ -6,11 +6,11 @@ Work Day Scheduler
 
 **Project Description/Summary:**
 
-Developing a Kanban style site to keep track of tasks - will be leveraging Bootstrap and jQuery.
+Creating a simple calendar application that will allow a user to save events for each hour of the day.
 
 **Live Site:**
 
-Head over to LINK TBD to view the page live!
+Head over to https://cwarmbrunn.github.io/work-day-scheduler/to view the page live!
 
 ---
 
