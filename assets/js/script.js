@@ -2,9 +2,7 @@ var events = {};
 
 var createEvents = function () {
   // create elements that make up an event
-  $("event-category").each(function (){
-
-  })
+  $("event-category").each(function () {});
   // Append elements to parent
 };
 
@@ -24,11 +22,11 @@ setInterval(currentDay, 1000);
 
 // Use Moment.js to add the text content of the current month, day and year
 function checkEvent() {
-  clockEl = moment().hours();
+  var clockEl = moment().hours();
 
   // Set up the event element - this is on all time blocks
   $("event-category").each(function () {
-    var blockHour = parseInt($(this).attr("class"));
+    var blockHour = parseInt($(this).attr("data-hour"));
 
     // If Conditional for if blockHour is less than the clockElement
     // Will add past class
@@ -53,7 +51,6 @@ function checkEvent() {
 }
 // Refreshing every second (1000 milliseconds)
 setInterval(checkEvent, 1000);
-
 
 // on card click - allow user to edit to add/change event
 $(".event-category").on("click", function () {
