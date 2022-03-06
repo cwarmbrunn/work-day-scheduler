@@ -1,4 +1,4 @@
-var events = {};
+var events = [];
 
 var createEvents = function (eventText) {
   // create elements that make up an event
@@ -10,14 +10,14 @@ var loadEvents = function () {
   events = JSON.parse(localStorage.getItem("events"));
   // If there's nothing in localStorage, create a new object to track all event status arrays
   if (!events) {
-    events = {
-      eventText: [],
-    };
+    events = [];
   }
 };
 
 // Function to save events to localStorage
-var saveEvents = function () {
+var saveEvents = function (clickedButton) {
+  events[$(clickedButton).parent().attr("data-hour")] = "You clicked me!";
+
   localStorage.setItem("events", JSON.stringify(events));
 };
 
@@ -70,10 +70,12 @@ $(".event-category").on("click", function () {
   $(".event-text").replaceWith(textInput);
 
   textInput.trigger("focus");
-
-  // update and re-save to localStorage when SaveBtn is clicked
-
-  $(".saveBtn").on("click", function () {
-    saveEvents();
-  });
 });
+
+// update and re-save to localStorage when SaveBtn is clicked
+
+$(".saveBtn").on("click", function () {
+  saveEvents($(this));
+});
+
+loadEvents();
