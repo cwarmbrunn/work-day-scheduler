@@ -1,3 +1,4 @@
+// Setting events variable equal to an empty array
 var events = [];
 
 var createEvents = function (eventText) {
@@ -16,7 +17,7 @@ var loadEvents = function () {
 
 // Function to save events to localStorage
 var saveEvents = function (clickedButton) {
-  events[$(clickedButton).parent().attr("data-hour")] = "You clicked me!";
+  events[$(clickedButton).parent().attr("data-hour")] = "Hello World";
 
   localStorage.setItem("events", JSON.stringify(events));
 };
@@ -62,7 +63,7 @@ function checkEvent() {
 // Refreshing every second (1000 milliseconds)
 setInterval(checkEvent, 1000);
 
-// on card click - allow user to edit to add/change event
+// On card click - allow user to edit to add/change event
 $(".event-category").on("click", function () {
   var text = "";
 
@@ -72,10 +73,11 @@ $(".event-category").on("click", function () {
   textInput.trigger("focus");
 });
 
-// update and re-save to localStorage when SaveBtn is clicked
+// Update and re-save to localStorage when SaveBtn is clicked
 
 $(".saveBtn").on("click", function () {
   saveEvents($(this));
 });
 
+// Calls loadEvents function
 loadEvents();
