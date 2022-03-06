@@ -25,7 +25,7 @@ function checkEvent() {
   var clockEl = moment().hours();
 
   // Set up the event element - this is on all time blocks
-  $("event-category").each(function () {
+  $(".event-category").each(function () {
     var blockHour = parseInt($(this).attr("data-hour"));
 
     // If Conditional for if blockHour is less than the clockElement
