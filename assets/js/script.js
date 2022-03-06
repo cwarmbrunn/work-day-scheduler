@@ -1,16 +1,26 @@
 var events = {};
 
-var createEvents = function () {
+var createEvents = function (eventText) {
   // create elements that make up an event
-  $("event-category").each(function () {});
+  var eventText = $("textarea").text(textInput);
   // Append elements to parent
+  eventText.append(eventText);
+};
+var loadEvents = function () {
+  events = JSON.parse(localStorage.getItem("events"));
+  // If there's nothing in localStorage, create a new object to track all event status arrays
+  if (!events) {
+    events = {
+      eventText: [],
+    };
+  }
 };
 
 // Function to save events to localStorage
 var saveEvents = function () {
   localStorage.setItem("events", JSON.stringify(events));
 };
-var loadEvents = function () {};
+
 // Setting up time/clock element
 var time = document.getElementById("currentDay");
 function currentDay() {
@@ -60,5 +70,10 @@ $(".event-category").on("click", function () {
   $(".event-text").replaceWith(textInput);
 
   textInput.trigger("focus");
-  // update and re-save to localStorage
+
+  // update and re-save to localStorage when SaveBtn is clicked
+
+  $(".saveBtn").on("click", function () {
+    saveEvents();
+  });
 });
