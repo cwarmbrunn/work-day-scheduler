@@ -10,7 +10,7 @@ Creating a simple calendar application that will allow a user to save events for
 
 **Live Site:**
 
-Head over to https://cwarmbrunn.github.io/work-day-scheduler/to view the page live!
+Head over to https://cwarmbrunn.github.io/work-day-scheduler/ to view the page live!
 
 ---
 
