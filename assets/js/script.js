@@ -21,7 +21,7 @@ var saveEvents = function (clickedButton) {
 
   var key = Math.random();
 
-  var text = $(data - hour).value;
+  var text = $("data-hour").value;
 
   localStorage.setItem(key, text);
 };
