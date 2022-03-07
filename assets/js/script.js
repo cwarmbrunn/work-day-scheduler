@@ -18,14 +18,6 @@ var loadEvents = function () {
 // Function to save events to localStorage
 var saveEvents = function (clickedButton) {
   events[$(clickedButton).parent().attr("data-hour")] = $("data-hour").val();
-
-  var key = Math.random();
-
-  var text = $(this).siblings(".event-text").val();
-  // var text = $(".event-text").val();
-
-  console.log("text", text);
-  localStorage.setItem(key, text);
 };
 
 // Setting up time/clock element
@@ -82,7 +74,14 @@ $(".event-category").on("click", function () {
 // Update and re-save to localStorage when SaveBtn is clicked
 
 $(".saveBtn").on("click", function () {
-  saveEvents($(this));
+  var key = Math.random();
+
+  var text = $(this).siblings(".description").val();
+  // var text = $(".event-text").val();
+
+  console.log("text", text);
+  localStorage.setItem(key, text);
+  loadEvents();
 });
 
 // Calls loadEvents function
