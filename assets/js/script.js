@@ -1,24 +1,32 @@
 // Setting events variable equal to an empty array
 var events = [];
 
-var createEvents = function (eventText) {
+function createEvents(eventText) {
   // create elements that make up an event
   var eventText = $("textarea").text(textInput);
   // Append elements to parent
   eventText.append(eventText);
-};
-var loadEvents = function () {
-  events = JSON.parse(localStorage.getItem("events"));
-  // If there's nothing in localStorage, create a new object to track all event status arrays
-  if (!events) {
-    events = [];
+}
+//
+function loadEvents() {
+  // Setting variable count equal to 9 - which is the start of the timeblocks
+  for (let count = 9; count < 18; count++) {
+    // Getting the count number from localStorage
+    localStorage.getItem(count);
+    // Setting myString equal to the getItem(count)
+    let myString = localStorage.getItem(count);
+    // If conditional for if there is a count in localStorage (a timeblock is clicked)
+    if (myString) {
+      // Then the ID for that count is pulled and it will place the value of myString
+      $("#" + count).val(myString);
+    }
   }
-};
+}
 
 // Function to save events to localStorage
-var saveEvents = function (clickedButton) {
+function saveEvents(clickedButton) {
   events[$(clickedButton).parent().attr("data-hour")] = $("data-hour").val();
-};
+}
 
 // Setting up time/clock element
 var time = document.getElementById("currentDay");
@@ -66,21 +74,16 @@ $(".event-category").on("click", function () {
   var text = "";
 
   var textInput = $("<textarea>").val(text);
-  $(".event-text").replaceWith(textInput);
 
   textInput.trigger("focus");
 });
 
-// Update and re-save to localStorage when SaveBtn is clicked
+// Update and save to localStorage when SaveBtn is clicked
 
 $(".saveBtn").on("click", function () {
-  var key = Math.random();
-
   var text = $(this).siblings(".description").val();
-  // var text = $(".event-text").val();
 
-  console.log("text", text);
-  localStorage.setItem(key, text);
+  localStorage.setItem($(this).parent().attr("data-hour"), text);
   loadEvents();
 });
 
