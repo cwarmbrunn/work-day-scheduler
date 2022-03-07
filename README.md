@@ -31,6 +31,8 @@ You can clone this repo - no special instructions to load this!
 
 ---
 
-**Screenshot:**
+**Screenshot and GIF:**
 
-![]()
+![Screenshot of Work Day Scheduler](./assets/images/work-day-scheduler.jpg)
+
+![Animated GIF of Work Day Scheduler](./assets/images/work-day-scheduler-gif.gif)
