@@ -21,11 +21,9 @@ var saveEvents = function (clickedButton) {
 
   var key = Math.random();
 
-  var text = $("data-hour").value;
+  var text = $(data - hour).value;
 
   localStorage.setItem(key, text);
-
-  localStorage.setItem("events", JSON.stringify(events));
 };
 
 // Setting up time/clock element
