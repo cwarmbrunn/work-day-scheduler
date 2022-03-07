@@ -17,12 +17,14 @@ var loadEvents = function () {
 
 // Function to save events to localStorage
 var saveEvents = function (clickedButton) {
-  events[$(clickedButton).parent().attr("data-hour")] = $("data-hour").value;
+  events[$(clickedButton).parent().attr("data-hour")] = $("data-hour").val();
 
   var key = Math.random();
 
-  var text = $("data-hour").value;
+  var text = $(this).siblings(".event-text").val();
+  // var text = $(".event-text").val();
 
+  console.log("text", text);
   localStorage.setItem(key, text);
 };
 
